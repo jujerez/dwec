@@ -4,7 +4,7 @@ window.onload = function() {
     del resultado devuelva “Suspenso”, “Aprobado”, “Notable” o “Sobresaliente”. Realiza
     otra versión utilizando el operador condicional ?:*/
 
-    // -------------- Versión 1 ------------------
+    /* -------------- Versión 1 ------------------
 
     var n = Number.parseInt(prompt("Introduzca la nota obtenida en el examen"));
 
@@ -21,11 +21,19 @@ window.onload = function() {
             alert("Nota invalida, la nota debe estar comprendia entre [0-10]")
     } else {
         alert (`${n}, no es número`);
-    }
+    }*/
 
     // ---------------- Versión 2 -------------------
 
     var n = Number.parseInt(prompt("Introduzca la nota obtenida en el examen"));
+    (Number.isInteger(n)) ?
+          (n>=0 && n<5)   ? alert("Suspenso") 
+        : (n>=5 && n<7)   ? alert("Aprobado")
+        : (n>=7 && n<9)   ? alert("Notable")
+        : (n>=9 && n<=10) ? alert("Sobresaliente")
+        : alert("Nota invalida, la nota debe estar comprendia entre [0-10]")
+    : alert (`${n}, no es número`);
+     
     
 
 }
