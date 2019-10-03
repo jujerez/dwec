@@ -1,3 +1,5 @@
+/*4. Haz que el ordenador te salude educadamente dándote los buenos días, buenas tardes o
+buenas noches dependiendo de la hora que sea.*/
 var ahora = new Date();
 var hora = ahora.getHours();
 (hora>=7 && hora<=12)   ? alert("Buenos dias!!")    : 
