@@ -22,10 +22,10 @@ window.onload = function() {
     letra que ha indicado no es correcta. En otro caso, se muestra un mensaje indicando que 
     el número y la letra de DNI son correctos. */
 
-    var n = Number.parseInt(prompt("Introduzca su número de dni"));
+    var n = parseInt(prompt("Introduzca su número de dni"));
     var letras = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C', 'K', 'E', 'T'];
 
-    if(Number.isInteger(n) && n>0 && n<=99999999 ) {
+    if(!isNaN(n) && n>0 && n<=99999999 ) {
         var l = prompt("Introduzca su letra del dni");
         
         
