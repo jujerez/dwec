@@ -3,5 +3,6 @@ var pat = /^([01]?[0-9]|2[0-3]):([0-5][0-9])(:[0-5][0-9])?$/
 var hora;
 
 do {
-    hora = prompt("Introduzca una hora(hh:mm:ss)|(hh:mm)")
+    hora = prompt("Introduzca una hora(hh:mm:ss)|(hh:mm)");
+    pat.test(hora) ? alert("Hora correcta") : alert("Hora incorrecta"); 
 } while (!pat.test(hora));
