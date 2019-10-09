@@ -6,6 +6,6 @@ var pat = /^([0-9]){4}-([B-D]|[F-H]|[J|N]|P|[R-T]|[V-Z]){3}$/
 var mat;
 
 do {
-    mat = prompt("Introduzca una matricula");
+    mat = prompt("Introduzca una matricula (9999-GGG)");
     pat.test(mat) ? alert("Matricula correcta") : alert("Matricula incorrecta, intentelo de nuevo")
 } while (!pat.test(mat));
