@@ -7,6 +7,7 @@ var pat = /^\d{1,3},\d{1,3}$/;
 
 do {
     coor=prompt("Introduzca la coordenada (999,999)");
+    pat.test(coor) ? alert("Coordenada correcta") : alert("Coordenada incorrecta")
 } while (!pat.test(coor));
 
 
