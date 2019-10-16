@@ -1,32 +1,18 @@
 /**28.Buscar dentro de un texto palabras con una longitud determinada. 
  * La longitud la decidirá el usuario en tiempo de ejecución */
 
- var texto = document.getElementsByTagName('p')[0].innerHTML;
- 
- var lon; 
-
 // Validación de la longitud
-
+var lon;
 do {
-
     lon = prompt("Introduzca la longitud de la cadena a buscar");
+} while (!(lon >= 0));
 
-} while (!(lon > 0));
+var x;
+var pat = RegExp(`(^| )(\\w{${lon}})(?=[ .,;:])`,`gim`);
+var texto = document.getElementsByTagName('p')[0].innerHTML;
 
-/*while (true) {
+while ((x=pat.exec(texto)) != null) {
+alert(x[0]);
+}
 
-    lon = prompt("Introduzca la longitud de la cadena a buscar");
-    if (lon>=0){
-        break;
-    }
-}*/
-
- var pat = RegExp(`(^| )(\\w{${lon}})(?=[ .,;:])`,`gim`);
-
- var x;
-
- while ((x=pat.exec(texto)) != null) {
-    alert(x[0]);
- }
-
- //alert(texto.match(pat));             // Muestra el array en un solo alert
+//alert(texto.match(pat));             // Muestra el array en un solo alert
