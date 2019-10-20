@@ -2,5 +2,18 @@
 incluya. Mostrar la cadena por consola. */
 
 var cad = prompt("Introduzca una cadena");
-var pat = /^(<script[^]*>)\w*(<\/script>)$/;
+var pat = /^(<script[^]*>)(\w.*)?(<\/script>)$/;
+if (!pat.test(cad)) {
+
+    console.log(cad);
+} else {
+    
+    var arr = cad.match(pat);
+    for (let i = 2; i < arr.length-1; i++) {
+        console.log(arr[i]);
+        
+    }
+}
+
+    
 
