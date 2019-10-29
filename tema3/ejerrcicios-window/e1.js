@@ -9,3 +9,4 @@ imprimir.onclick = function() {
 abrir.onclick = function() {
     window.open(" ","ventanita nueva","width=500, height=500");
 }
+
