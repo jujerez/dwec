@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <head> 
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title></title>
+        </head>
+        <body>
+            <h1>Solo funciona cerrar ventana padre</h1>
+            <button id="moveto">MoveTo Ventana Padre</button>
+            <button id="moveby">MoveBy Ventana Padre</button>
+            <button id="resizeto">ResizeTo ventana padre</button>
+            <button id="resizeby">ResizeBy ventana padre</button>
+            <button id="cerrar">Cerrar ventana padre</button>
+            <script>
+                
+
+                    
+                    moveto.onclick = function() {
+
+                        opener.window.moveTo(500,150);
+                    }
+
+                    moveby.onclick = function() {
+                        opener.window.moveBy(0,50);
+                    }
+
+                    resizeto.onclick = function() {
+                        opener.resizeTo(500,500)
+                    }
+
+                    resizeby.onclick = function() {
+                        opener.resizeBy(-50,-50);
+                    }
+
+                    cerrar.onclick = function() {
+                        opener.close();
+                    }
+            </script>
+        </body>
+    </html>
